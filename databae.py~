@@ -1,0 +1,14 @@
+import mysql.connector
+
+
+def get_connection():
+    try:
+        conn = mysql.connector.connect(
+            host="loalhost",
+            user="root",
+            password="SK@MySQL1202",
+            database="todo_app"
+        )
+        return conn
+    except mysql.connector.Error as e:
+        print(f"Error connecting to MySQL: {e}")
